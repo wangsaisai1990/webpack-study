@@ -31,11 +31,20 @@ module.exports={
   },
   plugins:[
 
-    　　　　new htmlWebpackFlugin({
-    　　　　template:path.join(__dirname,'./src/index.html'),// 指定模板页面
-    　　　　filename:'index.html' // 指定要生成的文件名称
-    　　　　})// 创建一个在内存中生成html页面插件
-    　　　　],
+　　　　new htmlWebpackFlugin({
+　　　　template:path.join(__dirname,'./src/index.html'),// 指定模板页面
+　　　　filename:'index.html' // 指定要生成的文件名称
+　　　　})// 创建一个在内存中生成html页面插件
+　],
+  module:{
+    rules:[
+        { test: /\.css$/, use: ['style-loader', 'css-loader'] },//配置处理.css文件的第三方loader规则
+
+        { test:/\.less$/,use: [ 'style-loader' , 'css-loader' , 'less-loader' ] },// 配置处理less文件loader规则
+
+         { test:/\.scss$/,use: [ 'style-loader' , 'css-loader' , 'sass-loader' ] },// 配置处理less文件sass规则
+    ]
+  },
   mode: 'development' // 设置mode
   
 }
