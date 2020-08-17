@@ -13,6 +13,7 @@
   "dependencies": {
     "babel-loader": "^7.1.5",
     "bootstrap": "^4.5.2",
+    "mint-ui": "^2.2.13",
     "open-browser-webpack-plugin": "0.0.5",
     "vue": "^2.6.11",
     "webpack": "^4.44.1",

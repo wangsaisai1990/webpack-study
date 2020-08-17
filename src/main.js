@@ -18,14 +18,14 @@ import Vue from 'vue'
 import app from './App.vue'
 import router from './router.js'
 
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(MintUI)
+
 //1导入路由
 import VueRouter from 'vue-router'
 //2，手动安装Vuerouter
 Vue.use(VueRouter)
-
-
-
-
 
 
 var  vm=new Vue({
