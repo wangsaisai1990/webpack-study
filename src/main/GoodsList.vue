@@ -1,12 +1,13 @@
 <template>
     <div>
-        <p>这是一个自定义组件</p>
+        <h1>GoodsList 组件</h1>
     </div>
+    
 </template>
 <script>
 
 </script>
 
-<style >
+<style lang="stylus" scoped>
 
 </style>

@@ -13,29 +13,46 @@ import Vue from 'vue'
  
 // import Vue from 'vue'
 // import Vue from '../node_modules/vue/dist/vue.js'
-import login from './login.vue'
+// import login from './login.vue'
 
-// var login={
-//     template:'<h1>这是一个组件</h1>'
-// }
+import app from './App.vue'
+import router from './router.js'
 
-var vm = new Vue({
+//1导入路由
+import VueRouter from 'vue-router'
+//2，手动安装Vuerouter
+Vue.use(VueRouter)
+
+
+
+
+
+
+var  vm=new Vue({
     el:'#app',
-    data:{
-        msg:'123'
-    },
+    router,
+    render:c=>c(app)
+})
+
+
+
+// var vm = new Vue({
+//     el:'#app',
+//     data:{
+//         msg:'123'
+//     },
     //这里会报：You are using the runtime-only build of Vue where the template compiler is not available.
     // components:{
     //     login
     // }
 
     //再webpack中，如果想要通过vue，把一个组件放到页面中，render函数可以实现
-    render:function(createElements){
-        return createElements(login)
-    }
+    // render:function(createElements){
+    //     return createElements(login)
+    // }
     // methods: {
     //     render:function(createElements){
     //         return createElements(login);
     //     }
     // },
-})
+// })
